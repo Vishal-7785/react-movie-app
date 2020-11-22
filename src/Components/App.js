@@ -2,7 +2,23 @@ import React from 'react'
 import { data } from '../data';
 import Navbar from './Navbar'
 import MovieCard from './MovieCard'
-function App() {
+class App extends React.Component {
+  
+  componentDidMount(){
+    const {store} = this.props;
+    store.subscribe(()=>{
+      console.log('UPDATED');
+      this.forceUpdate();
+    });
+    store.dispatch({
+      type: 'ADD_MOVIES',
+      movies: data
+    });
+    console.log('STate', this.props.store.getState());
+  }
+  render(){
+     const {movies} = this.props.store.getState();
+     console.log('render'); 
   return (
     <div className="App">
       <Navbar />
@@ -27,6 +43,7 @@ function App() {
       </div>
     </div>
   );
-}
+ }
+}  
 
 export default App;

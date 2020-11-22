@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
 import './index.css';
 import App from './Components/App';
-import movies from './Reducers'
+import rootReducer from './Reducers'
 
-const store = createStore(movies);
+const store = createStore(rootReducer);
 // console.log('before state', store.getState());
 // store.dispatch({
 //   type: 'ADD_MOVIES',

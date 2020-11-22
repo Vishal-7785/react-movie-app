@@ -1,5 +1,5 @@
 import React from 'react'
-import {addFavourite,addUnFavourite} from '../actions'
+import {addFavourite,addUnFavourite,setShowFavourites} from '../actions'
 class MovieCard extends React.Component{
 
     handleFavouriteClick = ()=>{

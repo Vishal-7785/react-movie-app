@@ -8,7 +8,8 @@
 // action types
 export const ADD_MOVIES = 'ADD_MOVIES';
 export const ADD_FAVOURITE = 'ADD_FAVOURITE';
-export const ADD_UNFAVOURITE = 'ADD_UNFAVOURITE'
+export const ADD_UNFAVOURITE = 'ADD_UNFAVOURITE';
+export const SET_SHOW_FAVOURITES = 'SET_SHOW_FAVOURITES';
 
 // action creators
  export function addMovies(movies){
@@ -29,5 +30,11 @@ export const ADD_UNFAVOURITE = 'ADD_UNFAVOURITE'
     return{
         type: ADD_UNFAVOURITE,
         movie
+    }
+}
+export function setShowFavourites(val){
+    return{
+        type:SET_SHOW_FAVOURITES,
+        val
     }
 }

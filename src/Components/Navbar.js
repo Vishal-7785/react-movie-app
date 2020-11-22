@@ -13,4 +13,4 @@ class  Navbar extends React.Component{
         }
 }
 
-export default App;
+export default Navbar;

@@ -52,7 +52,7 @@ export function movies(state=initialMoviesState, action){
 }
 
 const initialSearchState = {
-    result: {},
+    result: {} ,
     showSearchResults : false
 };
 
